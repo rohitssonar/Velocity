@@ -3,14 +3,21 @@ pipeline
 	agent any
 		stages 
 			{
-				stage ('one')
+			stage ('one')
+				{
+				steps 
 					{
-					steps 
-						{
 						echo "this is stage 1"
-         				echo "Changing dir & Copying"
+	      		}
+      		}
+			
+			stage ('cp')
+				{
+				steps 
+					{
+						echo "This is Stage of Copying Index File"
 						sh "cp -r /root/.jenkins/workspace/httpd-pipeline/index.html /var/www/html/index.html"
-	      			}
-      			}
+	      		}
+      		}
     	}
 }
