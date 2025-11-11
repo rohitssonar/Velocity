@@ -9,7 +9,7 @@ pipeline
 						{
 						echo "this is stage 1"
          				echo "Changing dir & Copying"
-						sh "cp -r /index.html /var/www/html/index.html"
+						sh "cp -r /root/.jenkins/workspace/httpd-pipeline/index.html /var/www/html/index.html"
 	      			}
       			}
     	}
